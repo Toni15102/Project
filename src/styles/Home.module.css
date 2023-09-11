@@ -4,6 +4,10 @@
   padding: 4rem 0;
 }
 
+.mainTitle {
+  font-size: 3em;
+}
+
 .box {
   padding: 1.25rem;
   display: flex;
@@ -13,6 +17,12 @@
   gap: .5rem;
   box-shadow: 0 0 2px 4px #f6b6b6;
   border-radius: 12px;
+}
+
+.resultWrapper {
+  overflow: hidden;
+  width: 18ch;
+  text-align: center;
 }
 
 .result {
@@ -31,7 +41,38 @@
 }
 
 .historyArea {
-  width: 100%;
+  width: 240px;
   height: 300px;
   overflow-y: auto;
+  font-size: 1.3em;
+  line-height: 2em;
+}
+
+.historyArea::-webkit-scrollbar {
+  display: none;
+}
+
+.historyArea li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.historyArea strong {
+  font-size: 1.3em;
+}
+
+.historyTitle {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.result:global(.pending) {
+  animation: randomGen 1s steps(30) infinite;
+}
+
+@keyframes randomGen {
+  100% {
+    transform: translateX(calc(-300 / 16.5 * 100%));
+  }
 }
