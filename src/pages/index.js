@@ -43,7 +43,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.container} ${inter.className}`}>
         <div className={styles.box}>
-          <h1 className={styles.mainTitle}>Bốc thăm trúng thưởng</h1>
+          <h1 className={styles.mainTitle}>Quay số trúng thưởng</h1>
           <div className={styles.resultWrapper}>
             <div className={`${styles.result} ${pending ? 'pending' : ''}`}>
               {pending ? RANDOM_DISPLAY : randomNumber}
