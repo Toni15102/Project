@@ -36,8 +36,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hữu Tài Wedding</title>
-        <meta name="description" content="Lễ cưới Tài - Trúc"/>
+        <title>Hữu Tài & Hồng Trúc Wedding</title>
+        <meta name="description" content="Lễ cưới Hữu Tài - Hồng Trúc"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="icon" href="/favicon.ico"/>
       </Head>
