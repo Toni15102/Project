@@ -13,6 +13,8 @@ export default function Home() {
   const [pending, setPending] = useState(false);
 
   const generateNumber = () => {
+    if (pending) return;
+
     setPending(true);
     let random = 0;
     while (random === 0) {
