@@ -1,15 +1,21 @@
 .container {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 1rem 0;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .mainTitle {
-  font-size: 3em;
+  font-size: 2.5em;
 }
-
 .box {
-  padding: 1.25rem;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +25,7 @@
   border-radius: 12px;
 }
 
+
 .resultWrapper {
   overflow: hidden;
   width: 19ch;
@@ -26,9 +33,12 @@
 }
 
 .result {
+  display: flex;
+  align-items: center;
   color: red;
-  font-size: 6em;
+  font-size: 5em;
   font-weight: bold;
+  height: 1em
 }
 
 .eventButton {
@@ -38,13 +48,26 @@
   border: none;
   box-shadow: 0 0 0 1px #565656;
   border-radius: 8px;
+  font-weight: 600;
+  transition: all .3s;
+  position: relative;
+}
+
+.eventButton:hover {
+  background-color: #f6b6b6;
+  color: #fff;
+  box-shadow: 0 0 0 1px #f6b6b6;
+}
+
+.eventButton:active {
+  transform: scale(0.9);
+  background-color: #f88a8a;
 }
 
 .historyArea {
   width: 240px;
-  height: 300px;
+  height: 160px;
   overflow-y: auto;
-  font-size: 1.3em;
   line-height: 2em;
 }
 
@@ -56,15 +79,6 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-}
-
-.historyArea strong {
-  font-size: 1.3em;
-}
-
-.historyTitle {
-  margin-top: 1.5rem;
-  margin-bottom: .5rem;
 }
 
 .result:global(.pending) {

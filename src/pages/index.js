@@ -2,6 +2,8 @@ import Head from 'next/head'
 import {useState} from 'react'
 import {Inter} from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import weddingImg from '../../public/wedding.jpg'
+import Image from "next/image";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -48,13 +50,14 @@ export default function Home() {
             </div>
           </div>
           <button className={styles.eventButton} onClick={generateNumber}>Quay Số</button>
-          <h2 className={styles.historyTitle}>Danh sách trúng thưởng</h2>
+          <p className={styles.historyTitle}>Danh sách trúng thưởng</p>
           <ul className={styles.historyArea}>
             {history.map((item) => (<li key={item.result}>
               <strong>{item.result}</strong>
               <span>{item.time}</span>
             </li>))}
           </ul>
+          <Image src={weddingImg} alt="Huu Tai & Hong Truc" width={680} height={240}/>
         </div>
       </main>
     </>
