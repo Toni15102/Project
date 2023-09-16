@@ -16,7 +16,7 @@ export default function Home() {
     setPending(true);
     let random = 0;
     while (random === 0) {
-      random = Math.floor(Math.random() * 500);
+      random = Math.floor(Math.random() * 639);
     }
     const result = Array(Math.max(3 - random.toString().length, 0)).fill(0)
     result.push(random);
